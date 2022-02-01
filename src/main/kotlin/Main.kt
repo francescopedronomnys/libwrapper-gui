@@ -15,5 +15,8 @@ fun main(args: Array<String>) {
     Runtime.getRuntime().loadLibrary("libwrapper")
     val value = NativeHost().callIncrementInt(42)
     println("Value from wrapper is $value")
+
+    println("Doing curl get")
+    NativeHost().curlGet()
 }
 
